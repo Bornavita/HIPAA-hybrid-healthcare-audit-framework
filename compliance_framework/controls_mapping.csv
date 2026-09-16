@@ -1,6 +1,7 @@
 HIPAA Section,Safeguard Name,Control Type,Technical Implementation,Audit Verification Script Status
 164.312(a)(1),Access Control,Technical,AWS S3 Block Public Access & Private Subnet Routing,Verified via hipaa_audit.py
-164.312(a)(2)(iv),Encryption at Rest,Technical,AWS KMS CMK Key Rotation Enabled,Verified via hipaa_audit.py
+164.312(a)(2)(iv),Encryption at Rest,Technical,AWS KMS CMK Server-Side Encryption,Verified via hipaa_audit.py
+164.312(a)(2)(iv),KMS Key Rotation,Technical,AWS KMS CMK Automatic Key Rotation,Verified via hipaa_audit.py
 164.312(c)(1),Data Integrity,Technical,AWS S3 Object Lock (WORM Retention),Verified via hipaa_audit.py
-164.308(a)(7),Contingency Plan,Administrative,AWS S3 Bucket Versioning Enabled,Verified via hipaa_audit.py
-164.502(b),Minimum Necessary Rule,Privacy,Masked EHR Views & IAM Access Controls,Verified via Assessor Checklist
+164.308(a)(7),Contingency Plan,Administrative,AWS S3 Bucket Versioning,Verified via hipaa_audit.py
+164.502(b),Minimum Necessary Rule,Privacy,Masked EHR Views & IAM Access Controls,Verified via Assessor Review (docs/minimum-necessary-review.md)

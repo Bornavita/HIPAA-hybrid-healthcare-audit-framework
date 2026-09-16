@@ -1,0 +1,11 @@
+Resource,HIPAA_Safeguard,Status,Risk_Rating,Audit_Timestamp,Notes
+wellup-health-ephi-records-f496464c,164.312(a)(1) Access Control (Public Block),COMPLIANT,LOW,2026-09-16T13:27:23.264527+00:00,None
+wellup-health-ephi-records-f496464c,164.312(a)(2)(iv) Encryption at Rest (KMS),COMPLIANT,LOW,2026-09-16T13:27:23.264527+00:00,None
+wellup-health-ephi-records-f496464c,164.312(a)(2)(iv) KMS Key Rotation Enabled,COMPLIANT,LOW,2026-09-16T13:27:23.264527+00:00,None
+wellup-health-ephi-records-f496464c,164.312(c)(1) Integrity Controls (WORM),COMPLIANT,LOW,2026-09-16T13:27:23.264527+00:00,None
+wellup-health-ephi-records-f496464c,164.308(a)(7) Contingency Plan (Versioning),COMPLIANT,LOW,2026-09-16T13:27:23.264527+00:00,None
+wellup-health-ephi-test-noncompliant-f496464c,164.312(a)(1) Access Control (Public Block),COMPLIANT,LOW,2026-09-16T13:27:23.264527+00:00,ObjectLock check failed: ObjectLockConfigurationNotFoundError
+wellup-health-ephi-test-noncompliant-f496464c,164.312(a)(2)(iv) Encryption at Rest (KMS),NON-COMPLIANT,HIGH,2026-09-16T13:27:23.264527+00:00,ObjectLock check failed: ObjectLockConfigurationNotFoundError
+wellup-health-ephi-test-noncompliant-f496464c,164.312(a)(2)(iv) KMS Key Rotation Enabled,NON-COMPLIANT,MEDIUM,2026-09-16T13:27:23.264527+00:00,ObjectLock check failed: ObjectLockConfigurationNotFoundError
+wellup-health-ephi-test-noncompliant-f496464c,164.312(c)(1) Integrity Controls (WORM),NON-COMPLIANT,MEDIUM,2026-09-16T13:27:23.264527+00:00,ObjectLock check failed: ObjectLockConfigurationNotFoundError
+wellup-health-ephi-test-noncompliant-f496464c,164.308(a)(7) Contingency Plan (Versioning),NON-COMPLIANT,MEDIUM,2026-09-16T13:27:23.264527+00:00,ObjectLock check failed: ObjectLockConfigurationNotFoundError

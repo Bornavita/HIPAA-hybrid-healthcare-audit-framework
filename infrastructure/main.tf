@@ -26,3 +26,8 @@ module "ephi_storage" {
   bucket_name = "${var.hospital_name}-ephi-records-${random_id.suffix.hex}"
   kms_key_arn = module.hipaa_kms.key_arn
 }
+
+module "ephi_storage_test_noncompliant" {
+  source      = "./modules/ephi_storage_noncompliant"
+  bucket_name = "${var.hospital_name}-ephi-test-noncompliant-${random_id.suffix.hex}"
+}

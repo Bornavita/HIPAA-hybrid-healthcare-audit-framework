@@ -1,7 +1,7 @@
 # HIPAA Hybrid Healthcare Compliance & Audit Framework
 
-Wellup Health System  
-HIPAA Security Rule (45 CFR Part 160 & Part 164) & Privacy Rule (§ 164.502 / § 164.512)
+### Wellup Health System  
+### HIPAA Security Rule (45 CFR Part 160 & Part 164) & Privacy Rule (§ 164.502 / § 164.512)
 
 ---
 

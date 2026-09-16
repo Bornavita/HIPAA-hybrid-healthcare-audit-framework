@@ -1,7 +1,7 @@
-# HIPAA Hybrid Healthcare Compliance & Audit Framework
+Markdown# HIPAA Hybrid Healthcare Compliance & Audit Framework
 
-**Organisation:** Wellup Health System  
-**Framework Baseline:** HIPAA Security Rule (45 CFR Part 160 & Part 164) & Privacy Rule (§ 164.502 / § 164.512)  
+Wellup Health System  
+HIPAA Security Rule (45 CFR Part 160 & Part 164) & Privacy Rule (§ 164.502 / § 164.512)  
 
 ---
 
@@ -20,7 +20,7 @@ This repository demonstrates an end-to-end **Security Compliance Assessment Work
 ## Repository Structure
 
 ```text
-HIPAA-hybrid-healthcare-audit-framework/
+hipaa-hybrid-healthcare-audit-framework/
 ├── README.md                           # Executive summary & Assessor report
 ├── .gitignore                          # Excludes state files & evidence logs
 ├── compliance_framework/
@@ -35,13 +35,7 @@ HIPAA-hybrid-healthcare-audit-framework/
         │   └── main.tf                 # KMS CMK key rotation module
         └── ephi_storage/
             └── main.tf                 # S3 ePHI WORM & encryption module
-
----
-
-## System Architecture
-
-```mermaid
-graph TD
+System ArchitectureCode snippetgraph TD
     subgraph OnPrem["Wellup Health On-Prem Datacenter"]
         DB[(PostgreSQL EHR Database)]
         View[Minimum Necessary Masked Views]
@@ -61,6 +55,4 @@ graph TD
     end
 
     VPN -->|TLS 1.3 In-Transit Encryption| AWS
-```
-
 HIPAA Control Traceability MatrixHIPAA SectionSafeguard TitleControl TypeTechnical ImplementationAudit Verification§ 164.312(a)(1)Access ControlTechnicalS3 Block Public Access & Private SubnetsCOMPLIANT§ 164.312(a)(2)(iv)Encryption at RestTechnicalAWS KMS CMK with key rotation enabledCOMPLIANT§ 164.312(c)(1)Data IntegrityTechnicalS3 Object Lock (WORM) retentionCOMPLIANT§ 164.308(a)(7)Contingency PlanAdministrativeS3 Bucket Versioning for disaster recoveryCOMPLIANT§ 164.502(b)Minimum NecessaryPrivacyRole-based data masking views on EHR databaseCOMPLIANT

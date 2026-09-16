@@ -1,0 +1,15 @@
+# Terraform ignore
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.binary
+.terraform.lock.hcl
+
+# Python ignore
+__pycache__/
+*.pyc
+venv/
+
+# Evidence output ignore (keep repository clean)
+evidence/hipaa_audit_report.csv

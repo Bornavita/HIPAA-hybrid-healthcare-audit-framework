@@ -1,7 +1,7 @@
 # HIPAA Hybrid Healthcare Compliance & Audit Framework
 
-**Organisation:** Wellup Health System
-**Framework Baseline:** HIPAA Security Rule (45 CFR Part 160 & Part 164) & Privacy Rule (§ 164.502 / § 164.512)
+Wellup Health System 
+HIPAA Security Rule (45 CFR Part 160 & Part 164) & Privacy Rule (§ 164.502 / § 164.512)
 
 ---
 
@@ -20,23 +20,46 @@ This repository demonstrates an end-to-end **Security Compliance Assessment Work
 
 ## Repository Structure
 
+<details>
+<summary><strong>Click to expand file tree</strong></summary>
+
 ```text
 hipaa-hybrid-healthcare-audit-framework/
-├── README.md                           # Executive summary & Assessor report
-├── .gitignore                          # Excludes state files & evidence logs
+├── README.md                     # Executive summary & Assessor report
+├── .gitignore                    # Excludes state files & evidence logs
+│
 ├── compliance_framework/
-│   ├── hipaa_audit.py                  # Automated Python compliance scanner
-│   └── controls_mapping.csv            # HIPAA Control Traceability Matrix
-└── infrastructure/                     # Terraform IaC
-    ├── main.tf                         # Root module orchestrator
-    ├── variables.tf                    # Environment configuration
-    ├── outputs.tf                      # Exported resource attributes
+│   ├── hipaa_audit.py             # Automated Python compliance scanner
+│   └── controls_mapping.csv       # HIPAA Control Traceability Matrix
+│
+└── infrastructure/                # Terraform IaC
+    ├── main.tf                    # Root module orchestrator
+    ├── variables.tf               # Environment configuration
+    ├── outputs.tf                 # Exported resource attributes
+    │
     └── modules/
         ├── kms/
-        │   └── main.tf                 # KMS CMK key rotation module
+        │   └── main.tf             # KMS CMK key rotation module
+        │
         └── ephi_storage/
-            └── main.tf                 # S3 ePHI WORM & encryption module
+            └── main.tf             # S3 ePHI WORM & encryption module
 ```
+
+</details>
+
+For a quicker reference, here's the same structure as a table:
+
+| Path | Description |
+|---|---|
+| `README.md` | Executive summary & Assessor report |
+| `.gitignore` | Excludes state files & evidence logs |
+| `compliance_framework/hipaa_audit.py` | Automated Python compliance scanner |
+| `compliance_framework/controls_mapping.csv` | HIPAA Control Traceability Matrix |
+| `infrastructure/main.tf` | Root module orchestrator |
+| `infrastructure/variables.tf` | Environment configuration |
+| `infrastructure/outputs.tf` | Exported resource attributes |
+| `infrastructure/modules/kms/main.tf` | KMS CMK key rotation module |
+| `infrastructure/modules/ephi_storage/main.tf` | S3 ePHI WORM & encryption module |
 
 ---
 

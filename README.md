@@ -19,17 +19,25 @@ This repository demonstrates an end-to-end **Security Compliance Assessor Workfl
 
 ## System Architecture
 
-```text
-[ Wellup Health On-Prem Datacenter ]
-     │
-     ├── PostgreSQL EHR Database (Encrypted at Rest)
-     │    └── Minimum Necessary Masked Views (Clinician vs. Billing)
-     │
-     └── Simulated IPsec VPN Gateway
-          │
-          ▼
-[ AWS Cloud Infrastructure (us-east-1) ]
-     │
-     ├── KMS Customer Managed Keys (CMK) ── Auto-Rotation Enabled
-     │
-     └── S3 ePHI Bucket ──────────────────── Object Lock (WORM) + KMS Enforced
+```mermaid
+graph TD
+    subgraph OnPrem["🏥 Wellup Health On-Prem Datacenter"]
+        DB[(PostgreSQL EHR Database)]
+        View[Minimum Necessary Masked Views]
+        VPN[Simulated Site-to-Site VPN Gateway]
+        DB --> View
+        View --> VPN
+    end
+
+    subgraph AWS["☁️ AWS Cloud Infrastructure (us-east-1)"]
+        KMS[AWS KMS Managed Key CMK<br/>Auto-Rotation Enabled]
+        S3[S3 ePHI Bucket<br/>Object Lock WORM + KMS Enforced]
+        Audit[Python Compliance Assessor<br/>hipaa_audit.py]
+        
+        KMS -->|Encrypts| S3
+        Audit -->|Validates Safeguards| S3
+        Audit -->|Validates Encryption| KMS
+    end
+
+    VPN -->|TLS 1.3 In-Transit Encryption| AWS
+```

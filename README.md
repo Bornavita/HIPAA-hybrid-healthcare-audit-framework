@@ -1,7 +1,6 @@
 # HIPAA Hybrid Healthcare Compliance & Audit Framework
-**Organization:** Wellup Health System  
+**Organisation:** Wellup Health System  
 **Framework Baseline:** HIPAA Security Rule (45 CFR Part 160 & Part 164) & Privacy Rule (§ 164.502 / § 164.512)  
-**Role:** Lead Security Compliance Assessor  
 
 ---
 
@@ -9,7 +8,7 @@
 
 Wellup Health System operates a hybrid healthcare model linking on-premises Electronic Health Record (EHR) databases with AWS cloud infrastructure for medical record storage, telemetry, and analytics. 
 
-This repository demonstrates an end-to-end **Security Compliance Assessor Workflow**:
+This repository demonstrates an end-to-end **Security Compliance Assessment Workflow**:
 1. **Infrastructure as Code (IaC):** Automated deployment of technical safeguards enforcing encryption, access control, and data immutability.
 2. **Privacy Safeguard Engineering:** Implementation of the HIPAA *Minimum Necessary Rule* (§ 164.502(b)).
 3. **Automated Evidence Collection:** Python audit engine verifying running cloud resources against HIPAA Technical Safeguards.
@@ -21,7 +20,7 @@ This repository demonstrates an end-to-end **Security Compliance Assessor Workfl
 
 ```mermaid
 graph TD
-    subgraph OnPrem["🏥 Wellup Health On-Prem Datacenter"]
+    subgraph OnPrem["Wellup Health On-Prem Datacenter"]
         DB[(PostgreSQL EHR Database)]
         View[Minimum Necessary Masked Views]
         VPN[Simulated Site-to-Site VPN Gateway]

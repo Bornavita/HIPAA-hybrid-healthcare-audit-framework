@@ -1,7 +1,7 @@
 # Minimum Necessary Rule — Assessor Review
 **HIPAA Reference:** § 164.502(b)
-**Reviewed by:** [Your name/role]
-**Date:** [Date of review]
+**Reviewed by:** Bornavita
+**Date:** 16/09/2026
 
 ## Control Description
 Access to the on-premises PostgreSQL EHR database is restricted through

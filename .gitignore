@@ -11,5 +11,5 @@ __pycache__/
 *.pyc
 venv/
 
-# Evidence output ignore (keep repository clean)
-evidence/hipaa_audit_report.csv
+# Evidence CSV is intentionally committed as proof-of-concept audit output
+# evidence/hipaa_audit_report.csv
